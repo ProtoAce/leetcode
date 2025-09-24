@@ -57,6 +57,7 @@
         "stack": "cpp",
         "deque": "cpp",
         "algorithm": "cpp",
-        "optional": "cpp"
+        "optional": "cpp",
+        "bitset": "cpp"
     }
 }
