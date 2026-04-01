@@ -58,6 +58,8 @@
         "deque": "cpp",
         "algorithm": "cpp",
         "optional": "cpp",
-        "bitset": "cpp"
+        "bitset": "cpp",
+        "cassert": "cpp",
+        "queue": "cpp"
     }
 }
