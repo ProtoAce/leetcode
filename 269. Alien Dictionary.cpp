@@ -75,9 +75,7 @@ public:
         {   
             for(int i = 0; i < it->second.size(); i++)
             {
-                std::cout << "test\n";
                 std::cout << it->first << "<" << it->second[i] << std::endl;
-                std::cout << "\n";
             }
         }
         return true;
@@ -120,7 +118,7 @@ public:
             answer.push_back(solution[i]);
         }
 
-        std::cout << answer << "> sol" << std::endl;
+        std::cout << answer << std::endl;
     }
 
     std::string foreignDictionary(std::vector<std::string>& words) {
@@ -143,7 +141,7 @@ public:
             char node = nodes.top();
             nodes.pop();
 
-            //print_solution(solution);
+            print_solution(solution);
             int position = node_in_solution(solution, node);
             auto it = solution.begin();
 
