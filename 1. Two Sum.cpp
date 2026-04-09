@@ -5,31 +5,23 @@
 #include <cassert>
 #include <string>
 
+using namespace std;
+
 class Solution {
-    public:
+ public:
         std::vector<int> twoSum(std::vector<int>& nums, int target) {
-            std::unordered_map<int, int> map;
+            unordered_map<int, int> mem;
 
-            if (nums.size() == 2)
+            for(int i = 0; i < nums.size(); i++)
             {
-                return {0, 1};
-            }
-
-            for (int i = 0; i < nums.size(); i++)
-            {
-                
-                if(map.find(target - nums[i]) != map.end())
+                int difference = target - nums[i];
+                if(mem.find(difference) != mem.end())
                 {
-                    return {map.find(target - nums[i])->second, i};
+                    return {mem[difference], i};
                 }
-
-                map.insert({nums[i], i});
+                mem.insert(nums[i], i);
+                
             }
-        return {};    
-        }
+            return {};
     };
-
-// main() is where program execution begins.
-int main() {
-    return 0;
- }
+};
